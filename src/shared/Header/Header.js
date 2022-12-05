@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import image from '../../assets/website-image.jpg'
 
 const Header = () => {
     return (
         <div>
             <div className="navbar bg-base-100">
   <div className="flex-1">
-    <img src="" alt="" />
+    <img className='h-16' src={image} alt="" />
     <Link to='/' className="btn btn-ghost normal-case text-xl">LEARN ACADEMY</Link>
   </div>
   <div className="flex-none">
