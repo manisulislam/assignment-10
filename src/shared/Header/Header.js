@@ -17,6 +17,12 @@ const Header = () => {
       <li><Link to='/courses'>Courses</Link></li>
       <li><Link to='/login'>Login</Link></li>
       <li><Link to='/register'>Register</Link></li>
+      <div className="form-control mt-1">
+  <label className="label cursor-pointer">
+    <span className="label-text">dark/light</span> 
+    <input type="checkbox" className="toggle" />
+  </label>
+</div>
       
     </ul>
   </div>
