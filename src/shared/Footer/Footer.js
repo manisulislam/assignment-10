@@ -4,7 +4,7 @@ import image from '../../assets/website-image.jpg'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer mt-20 p-10 bg-base-200 text-base-content">
   <div>
     <img className='h-28 pl-11' src={image} alt="" />
     <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
