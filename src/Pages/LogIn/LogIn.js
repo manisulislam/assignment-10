@@ -9,6 +9,7 @@ const LogIn = () => {
     
     const email = form.email.value;
     const password = form.password.value;
+    form.reset()
     console.log( email, password)
   }
 
@@ -32,10 +33,16 @@ const LogIn = () => {
             <span className="label-text">Password</span>
           </label>
           <input type="text" name='password' placeholder="password" className="input input-bordered" />
+          <div>
+        <div className="divider">OR</div>
+        </div>
+        <button className="btn mb-3 btn-outline btn-primary">Google</button>
+        <button className="btn btn-outline btn-primary">GitHub</button>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Have a new account? <Link to='/register'> <span className='text-orange-500'>Register </span></Link></a>
           </label>
         </div>
+        
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
