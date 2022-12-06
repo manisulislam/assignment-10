@@ -3,18 +3,14 @@ import { Link } from 'react-router-dom';
 
 const LogIn = () => {
 
-
-
-
-
-    const handelLogIn = event =>{
-        event.peventDefault()
-       console.log(event)
-
-    }
-
-
-
+  const handelLogIn = event =>{
+    event.preventDefault()
+    const form = event.target;
+    
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log( email, password)
+  }
 
     return (
         <div className="hero min-h-screen bg-base-200">
