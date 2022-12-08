@@ -1,3 +1,4 @@
+import Check from "../../Pages/Courses/Check";
 import Courses from "../../Pages/Courses/Courses";
 import CoursesDetails from "../../Pages/Courses/CoursesDetails";
 import Side from "../../Pages/Courses/Side";
@@ -46,6 +47,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
+                element: <Check></Check>,
+                loader: ({params})=> fetch(`http://localhost:5000/checkout/${params.id}`)
                 
             }
             

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const CoursesDetails = () => {
     const contentDetails = useLoaderData()
-    const {title, image, details}= contentDetails
+    const {id,title, image, details}= contentDetails
     return (
         <div>
             <div className='flex'>
@@ -17,7 +17,7 @@ const CoursesDetails = () => {
     <p>{details}</p>
     <div className="card-actions justify-end">
     
-      <button className="btn btn-primary">Get Premimum Access</button>
+      <Link to={`/checkout/${id}`}><button className="btn btn-primary">Get Premimum Access</button></Link>
     </div>
   </div>
 </div>
