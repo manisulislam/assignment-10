@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 import image from '../../assets/website-image.jpg'
+import { authContext } from '../../Context/UserContext';
 
 const Header = () => {
+
+  const {user} = useContext(authContext)
+  console.log(user)
 
     const menuitems = <>
     <li><Link to='/'>Home</Link></li>
@@ -37,6 +42,9 @@ const Header = () => {
          {menuitems}
           </ul>
         </div>
+        {
+          user.uid && <p><CgProfile></CgProfile></p>
+        }
         
       </div>
 
