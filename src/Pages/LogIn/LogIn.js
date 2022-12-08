@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from '../../Context/UserContext';
 
 const LogIn = () => {
   const { userLogIn, googleSignIn,githubSignIn}= useContext(authContext)
-
+const navigate = useNavigate()
   const handelLogIn = event =>{
     event.preventDefault()
     const form = event.target;
@@ -15,6 +15,7 @@ const LogIn = () => {
     .then((result)=>{
       const user = result.user;
       console.log(user)
+      navigate('/')
     })
     .catch((error)=> console.error('error', error))
     form.reset()
@@ -26,6 +27,7 @@ const LogIn = () => {
     .then((result)=>{
       const user = result.user
       console.log(user)
+      navigate('/')
     })
     .catch((error)=> console.error('error', error))
   }
@@ -35,6 +37,7 @@ const LogIn = () => {
     .then((result)=>{
       const user = result.user;
       console.log(user)
+      navigate('/')
     })
     .catch((error)=>{
       console.error('error', error)

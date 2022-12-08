@@ -2,6 +2,7 @@ import Check from "../../Pages/Courses/Check";
 import Courses from "../../Pages/Courses/Courses";
 import CoursesDetails from "../../Pages/Courses/CoursesDetails";
 import Side from "../../Pages/Courses/Side";
+import PrivateRoute from  "./privateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
@@ -47,7 +48,10 @@ const router = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                element: <Check></Check>,
+                element:<PrivateRoute>
+                     <Check></Check>
+
+                </PrivateRoute>,
                 loader: ({params})=> fetch(`http://localhost:5000/checkout/${params.id}`)
                 
             }
