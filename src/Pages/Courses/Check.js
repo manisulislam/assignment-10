@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 const Check = () => {
     const checkOut = useLoaderData()
     const {title}= checkOut
+    console.log(checkOut)
 
     return (
         <div>

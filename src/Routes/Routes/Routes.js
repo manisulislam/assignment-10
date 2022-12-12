@@ -39,12 +39,12 @@ const router = createBrowserRouter([
             {
                 path: '/side/:id',
                 element: <Side></Side>,
-                loader: ({params})=> fetch(`http://localhost:5000/side/${params.id}`)
+                loader: ({params})=> fetch(`https://learning-platform-server-side-blue.vercel.app/side/${params.id}`)
             },
             {
                 path: '/courses/:id',
                 element: <CoursesDetails></CoursesDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/course-details/${params.id}`)
+                loader: ({params})=> fetch(`https://learning-platform-server-side-blue.vercel.app/course-details/${params.id}`)
             },
             {
                 path: '/checkout/:id',
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
                      <Check></Check>
 
                 </PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/checkout/${params.id}`)
+                loader: ({params})=> fetch(`https://learning-platform-server-side-blue.vercel.app/checkout/${params.id}`)
                 
             }
             

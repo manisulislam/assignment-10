@@ -1,3 +1,16 @@
+
+
+# my website live link:
+ https://assignment-10-866ef.web.app/
+
+# my website feature:
+1. use react 
+2. use tailwind css component library daisy ui
+3. firebase authentication
+4. good ui and ux
+5. uses blog section to current website information
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

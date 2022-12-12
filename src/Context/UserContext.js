@@ -18,21 +18,27 @@ const UserContext = ({children}) => {
     }
 
     const userLogIn = (email, password)=>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const googleSignIn = (proider)=>{
+    const googleSignIn = (provider)=>{
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
 
     const githubSignIn =(provider)=>{
+        setLoading(true)
         return signInWithPopup(auth,githubProvider)
+        
     }
 
     useEffect(()=>{
         const  unSubsCribe = onAuthStateChanged(auth, (currentUser)=>{
             setUser(currentUser)
-            setUser(false)
+           
+            setLoading(false)
+
         })
         return ()=>{
             unSubsCribe()
